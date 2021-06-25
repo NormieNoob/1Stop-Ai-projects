@@ -92,6 +92,12 @@
             <a href="service.html" onclick="func()">Explore our products</a>
         </div>
     </div>
+
+        <!-- Top Button -->
+        <button id="btn" class="" onclick="myFunction()">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
     <hr>
     <div class="keypoint">
         <h2>Our key highlights</h2>
@@ -226,6 +232,29 @@
 			});
 		});
 		
+        document.addEventListener("DOMContentLoaded", function ()
+    	{
+        var top = document.getElementById('btn');
+        top.classList.add('showtop');
+	  		document.addEventListener('scroll', function ()
+	  		{
+		  			if (window.scrollY > 300){
+		  				top.classList.remove('showtop');
+		  			}
+		  			else
+		  				top.classList.add('showtop');
+			});
+        });
+
+        function myFunction(){
+            console.log(top)
+            window.scrollTo({
+                top:0,
+                left:0,
+                behavior:"smooth"
+            })
+        }
+
     </script>
 </body>
 </html>
