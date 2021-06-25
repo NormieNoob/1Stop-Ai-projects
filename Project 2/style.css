@@ -1,0 +1,11 @@
+.nav{
+    background-color: white;
+    z-index: 9;
+}
+
+.nav_top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
